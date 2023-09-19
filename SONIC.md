@@ -1065,3 +1065,9 @@ We performed a post-audit review focused on reviewing the fixes to the issues th
 | SS-SONIC-007 | Medium | Fixed | [2e9b2e2e0353bad12f49ad07a4be6b7c65c47b99](https://github.com/sonicdex/sonic-v1/commit/2e9b2e2e0353bad12f49ad07a4be6b7c65c47b99) | There is a typo in the error message (missing a space). |
 | SS-SONIC-009 | Low | Fixed | [9e044b3238c581cc459c91b405482ced5fc963e0](https://github.com/sonicdex/sonic-v1/commit/9e044b3238c581cc459c91b405482ced5fc963e0) | - |
 | SS-SONIC-014 | Medium | Can't Fix | - | The listed functions are need for future UX updates |
+| SS-SONIC-23 | Low | Fixed | [a99e47d5d829aadc83f1c6ee02ea769334b166c9](https://github.com/sonicdex/sonic-v1/commit/a99e47d5d829aadc83f1c6ee02ea769334b166c9) | - |
+| SS-SONIC-21 | Currently Medium, Very High for SNS | Fixed | [b7575d09abdbe2ff28e6fb1542345dc97c4b9cdf](https://github.com/sonicdex/sonic-v1/commit/b7575d09abdbe2ff28e6fb1542345dc97c4b9cdf) | monitorMetrics should be made public so that anyone can check the metrics of the canister. |
+| SS-SONIC-22 | Currently Low, High for SNS | Fixed | [1e10653b49ad9ffcc9e6cdc5a2f056134d368f2b](https://github.com/sonicdex/sonic-v1/commit/1e10653b49ad9ffcc9e6cdc5a2f056134d368f2b) | - |
+| SS-SONIC-024 | Low | Fixed | [1e10653b49ad9ffcc9e6cdc5a2f056134d368f2b](https://github.com/sonicdex/sonic-v1/commit/1e10653b49ad9ffcc9e6cdc5a2f056134d368f2b) | - |
+| SS-SONIC-026 | Low | Fixed | [1e10653b49ad9ffcc9e6cdc5a2f056134d368f2b](https://github.com/sonicdex/sonic-v1/commit/1e10653b49ad9ffcc9e6cdc5a2f056134d368f2b) | - |
+| SS-SONIC-027 | Currently Medium, Very High for SNS | Fixed | [10bf8c2ff36985f39af6e9e0c6633bdf71301188](https://github.com/sonicdex/sonic-v1/commit/10bf8c2ff36985f39af6e9e0c6633bdf71301188) | README.md now includes building instruction for SWAP |
