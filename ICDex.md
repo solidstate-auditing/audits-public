@@ -273,7 +273,8 @@ We classify our findings into the following categories:
 
 ### Tally of issues by severity
 
-
+| Category | Number of Findings |
+| --- | --- |
 | Very High | 4 *Only 2 applicable after an SNS launch |
 | High | 14 |
 | Medium | 18 |
