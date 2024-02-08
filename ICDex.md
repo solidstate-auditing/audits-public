@@ -273,13 +273,14 @@ We classify our findings into the following categories:
 
 ### Tally of issues by severity
 
-| Category | Number of Findings | Status |
-| --- | --- | --- |
-| Very High | 4 *Only 2 applicable after an SNS launch | [EVAL IN POST-AUDIT REVIEW](#post-audit-review-1) |
-| High | 14 | [EVAL IN POST-AUDIT REVIEW](#post-audit-review-1) |
-| Medium | 18 | [EVAL IN POST-AUDIT REVIEW](#post-audit-review-1) |
-| Low | 10 | [EVAL IN POST-AUDIT REVIEW](#post-audit-review-1) |
-| Total: | 46 |  |
+
+| Very High | 4 *Only 2 applicable after an SNS launch |
+| High | 14 |
+| Medium | 18 |
+| Low | 10 |
+| Total: | 46 |
+
+See [here](#current-status-of-all-found-issues) for the status after [Post-Audit Review #1](#post-audit-review-1).
 
 ### Security Concerns
 
@@ -457,7 +458,7 @@ Beyond functionally testing the above methods, the test suite should exercise co
 ### Components
 
 > **Diagram Guide:**
-> 
+>
 > - Inter-canister calls and transactions initiated by external parties are marked as solid lines.
 > - Internal function calls in canisters are marked as dotted lines.
 > - Boxes with dotted borders are functions and their larger layouts determine their canister.
@@ -781,7 +782,7 @@ A boolean value that indicates the success of the operation.
 
 **Method `accountConfig`:**
 
-Configures user preferences such as the `ExchangeMode` and the `KeepingBalanceInTraderAccount`. 
+Configures user preferences such as the `ExchangeMode` and the `KeepingBalanceInTraderAccount`.
 
 **Arguments:**
 
@@ -1009,7 +1010,7 @@ No returned value.
 
 **Method `cancelAll`:**
 
-Cancels one or more traders’ orders in batch, either invoked by a single trader for their own trades or by the PAIR owner for one or many traders. 
+Cancels one or more traders’ orders in batch, either invoked by a single trader for their own trades or by the PAIR owner for one or many traders.
 
 **Arguments:**
 
@@ -1729,7 +1730,7 @@ Revise the queue management strategy to ensure a predictable and consistent orde
 - **Component:** ROUTER
 - **Severity:** High
 - **Details:**
-The ICDexMaker approves an amount of ICL to its pair that it does not possess during creation, as seen in the code snippet. 
+The ICDexMaker approves an amount of ICL to its pair that it does not possess during creation, as seen in the code snippet.
 
 ```rust
 let arg: ICRC1.TransferArgs = {
@@ -1895,132 +1896,132 @@ Implement a series of concurrency tests specifically designed to exercise the IC
 
 #### **SS-ICDEX-017: Lack of build and hash calculation instructions for canisters**
 
-- **Component:** ALL  
-- **Severity:** High  
-- **Details:**  
+- **Component:** ALL
+- **Severity:** High
+- **Details:**
 There's no guidance on how to build the canister and calculate the hash of the built canister for comparison with deployed canisters. This omission complicates the process of verifying and reproducing builds, affecting the integrity and trustworthiness of the deployment process.
-- **Recommendation:**  
+- **Recommendation:**
 Provide detailed instructions for building canisters and calculating their hashes, ensuring transparent and verifiable deployment processes.
 
 ---
 
 #### **SS-ICDEX-018: Need for consolidated and consistent 'initialized' and 'paused' checking**
 
-- **Component:** ALL  
-- **Severity:** Medium  
-- **Details:**  
+- **Component:** ALL
+- **Severity:** Medium
+- **Details:**
 Currently, the code lacks a centralized function to consistently handle `initialized` and `paused` checks, leading to redundancy and potential issues in maintainability. This problem is evident in various functions across the ICDexPair and ICDexMaker components.
-- **Recommendation:**  
+- **Recommendation:**
 Implement a dedicated function to handle these checks, enhancing code maintainability and simplifying updates to the logic.
 
 ---
 
 #### **SS-ICDEX-019: Complexity of add function in maker**
 
-- **Component:** MAKER  
-- **Severity:** Medium  
-- **Details:**  
+- **Component:** MAKER
+- **Severity:** Medium
+- **Details:**
 The `add` function is excessively complex and hard to understand, which could be improved by splitting it into smaller parts or enhancing its documentation with more detailed comments.
-- **Recommendation:**  
+- **Recommendation:**
 Refactor the `add` function for simplicity or provide comprehensive comments to aid in understanding and maintaining the code.
 
 ---
 
 #### **SS-ICDEX-020: Ambiguous use of non-essential operation description**
 
-- **Component:** MAKER  
-- **Severity:** Low  
-- **Details:**  
+- **Component:** MAKER
+- **Severity:** Low
+- **Details:**
 The phrase “This operation is not required for non-essential purposes” is used frequently but lacks clarity, making it difficult to understand its meaning and implications.
-- **Recommendation:**  
+- **Recommendation:**
 Clarify or rephrase this description to convey its intended meaning more effectively.
 
 ---
 
 #### **SS-ICDEX-021: Invalid condition in the _create function of the router canister**
 
-- **Component:** ROUTER  
-- **Severity:** Medium  
-- **Details:**  
+- **Component:** ROUTER
+- **Severity:** Medium
+- **Details:**
 There's an invalid condition in the `_create` function of the Router canister, where the last condition should be checking `token1Std` instead of `token0Std`.
-- **Recommendation:**  
+- **Recommendation:**
 Correct the conditional statement to ensure accurate functionality.
 
 ---
 
 #### **SS-ICDEX-022: Unnecessary else clause in the _testToken function of the router canister**
 
-- **Component:** ROUTER  
-- **Severity:** Low  
-- **Details:**  
+- **Component:** ROUTER
+- **Severity:** Low
+- **Details:**
 The `_testToken` function contains an unnecessary `else` clause, which could be removed for cleaner code, as the rest of the function won’t run after the return statement in the preceding if block.
-- **Recommendation:**  
+- **Recommendation:**
 Remove the redundant `else` clause to streamline the function.
 
 ---
 
 #### **SS-ICDEX-023: Redundant assertions in the _create function of the router canister**
 
-- **Component:** ROUTER  
-- **Severity:** Low  
-- **Details:**  
+- **Component:** ROUTER
+- **Severity:** Low
+- **Details:**
 Assertions in lines 434 and 439 of the `_create` function are unnecessary and could be replaced with a simple error handling mechanism for the `_testToken` calls.
-- **Recommendation:**  
+- **Recommendation:**
 Implement graceful error handling in place of the current assertions for improved code efficiency and clarity.
 
 ---
 
 #### **SS-ICDEX-024: Unnecessary ic.update_settings call in router canister**
 
-- **Component:** ROUTER  
-- **Severity:** Low  
-- **Details:**  
+- **Component:** ROUTER
+- **Severity:** Low
+- **Details:**
 The `_create` function of the Router canister includes an unnecessary call to `ic.update_settings` following the creation and installation of the WASM on the token pair canister.
-- **Recommendation:**  
+- **Recommendation:**
 Optimize the canister creation process by setting the necessary configurations in the initial creation call, eliminating the need for a subsequent update settings call.
 
 ---
 
 #### **SS-ICDEX-025: Inconsistency in handling order prices in tradeMKT and tradeMKT_b functions**
 
-- **Component:** PAIR  
-- **Severity:** Medium  
-- **Details:**  
+- **Component:** PAIR
+- **Severity:** Medium
+- **Details:**
 The `tradeMKT_b` function accepts a limit price, whereas the `tradeMKT` function does not, leading to inconsistency in how order prices are handled.
-- **Recommendation:**  
+- **Recommendation:**
 Address this discrepancy to ensure consistent handling of order prices across functions.
 
 ---
 
 #### **SS-ICDEX-026: Redundant logic in tradeMKT and tradeMKT_b functions**
 
-- **Component:** PAIR  
-- **Severity:** Low  
-- **Details:**  
+- **Component:** PAIR
+- **Severity:** Low
+- **Details:**
 The functions `tradeMKT_b` and `tradeMKT` autonomously populate the `order` variable, which appears redundant given that the `trade` and `trade_b` functions already receive and validate this value.
-- **Recommendation:**  
+- **Recommendation:**
 Evaluate and potentially streamline these functions to remove unnecessary logic and improve code efficiency.
 
 ---
 
 #### **SS-ICDEX-027: Broker functions effectiveness with zero rate**
 
-- **Component:** PAIR  
-- **Severity:** Low  
-- **Details:**  
+- **Component:** PAIR
+- **Severity:** Low
+- **Details:**
 In the current implementation, being a broker with a fee set to zero in `trade_b` and `tradeMKT_b` functions is meaningless.
-- **Recommendation:**  
+- **Recommendation:**
 Implement a validation check to ensure that broker fees are within a reasonable range, avoiding zero rates.
 
 ---
 
 #### **SS-ICDEX-028: Unused initArgs.owner**
 
-- **Component:** PAIR  
-- **Severity:** Low  
-- **Details:**  
+- **Component:** PAIR
+- **Severity:** Low
+- **Details:**
 The `initArgs.owner` variable in the ICDexPair.mo file is filled but not used, and the line that should assign the owner value is commented out.
-- **Recommendation:**  
+- **Recommendation:**
 Uncomment and utilize the `owner` variable for access control checks in the `init` function.
 
 ---
@@ -2099,7 +2100,7 @@ Make sure to set icDao as the controller of the Router canister, as well as of t
 - **Component:** ALL
 - **Severity:** Very High
 - **Details:**
-Users must be able to verify that the canisters were indeed donated to the SNS. 
+Users must be able to verify that the canisters were indeed donated to the SNS.
 - **Implication:**
 When a canister or set of canisters are donated to the SNS users should be able to verify that this happened, otherwise, they won’t be able to trust the system.
 - **Recommendation:**
