@@ -21,7 +21,7 @@ This scorecard is a broad overview of all our findings. You can also view the [S
 | Scalability | **Sufficient**: The system as a whole is scalable by its nature of being a multi-canister architecture. Certain state (like ICEvents) might eventually overflow the capacity of a single canister. This can be fixed in time, and the development team made it clear in the documentation where these shortcomings exist. |
 | Upgradeability | **Sufficient**: Though some potential bugs were found, and some recommendations were made to communicate the current limitations, the system is upgradeable and has fallbacks in case things go wrong. |
 | Documentation | **Strong**: The ICDex ecosystem of canisters is well documented and, though the system is complex, it’s easy for external developers to understand from a high-level perspective without needing to dive into the code.  |
-| Testing & Verification | **Poor**: No tests were provided to the auditors during the audit. At the time of the audit, there was no clear way to perform reproducible builds. There isn’t a permanent store of record where all events from all canisters will be stored for possible later auditing/debugging/transparency, permanently. |
+| Testing & Verification | **Poor**: No tests were provided to the auditors during the audit. At the time of the initial audit review, there was no clear way to perform reproducible builds (though this was resolved during Post-Audit Review #1). There isn’t a permanent store of record where all events from all canisters will be stored for possible later auditing/debugging/transparency, permanently. |
 
 ### Scorecard levels:
 
