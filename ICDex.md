@@ -6,6 +6,10 @@
 
 # ICDex Audit Report
 
+## 📄 [Click here](https://drive.google.com/file/d/1Dij2cba-cKuzdrdyWEATp5Zp1oeVMATR/view?usp=sharing) for the PDF version of this report.
+
+---
+
 > ⚠️ **General Disclaimer:**
 > This audit report aims to detail the current state of security and potential weaknesses of the audited app within a limited scope. It does not make any recommendations regarding the app’s user experience, investment potential, or other factors.
 
