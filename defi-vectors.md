@@ -377,7 +377,7 @@ Each vector follows a trading algorithm whose parameters can be configured by th
 
 Upon initialization of the canister, a series of timers are activated sequentially, initiating various processes within the canister. This includes the right and left indexers and matching and sender processes, among other actions. The following diagram illustrates the flow of timers post-initialization:
 
-![./diagrams/defive_timers.png](./diagrams/.png)
+![./diagrams/defive_timers.png](./diagrams/defive_timers.png)
 
 ### Public functions
 
