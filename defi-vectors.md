@@ -93,7 +93,7 @@ Solidstate conducts audits with the highest standards of professional integrity 
 
 We work with our clients to allow them some control over the scope and duration of the audits, but clients do not have any control over the content of the final audit report. Our audit reports must be an accurate representation of all findings during the audit.
 
-Compensation for Solidstate audits is determined by a fixed USD-based daily rate that’s contracted with the client upfront. To avoid any potential conflicts of interest, Solidstate does not accept any native tokens or equity from a project as compensation for executing its audit. The compensation for this project is recorded on chain.
+Compensation for Solidstate audits is determined by a fixed USD-based daily rate that’s contracted with the client upfront. To avoid any potential conflicts of interest, Solidstate does not accept any native tokens or equity from a project as compensation for executing its audit. The compensation for this project is [recorded on chain](https://nns.ic0.app/proposal/?u=extk7-gaaaa-aaaaq-aacda-cai&proposal=35).
 
 Solidstate and Code & State do not hold any equity stake in Neutrinite DAO.
 
