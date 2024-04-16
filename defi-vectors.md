@@ -117,7 +117,7 @@ Our senior auditor co-founded notable projects on ICP since Genesis and brings o
 
 #### Junior Auditor: [Nima Rasooli](https://twitter.com/0xNimaRa)
 
-Our junior auditor is a technical talent who led the development of multiple notable ICP projects. They currently serve as a Tech Lead in the Web3 space for a noteworthy brand.
+Nima led the development of multiple notable ICP projects such as DAB and Daowabunga as Tech Lead at Psychedelic. After Psychedelic converted into Fleek, he lead the development for cross-chain integrations.
 
 #### Technical Writer: [Robin Moore](https://twitter.com/RobinMooreWeb3)
 
