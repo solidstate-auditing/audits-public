@@ -266,7 +266,7 @@ Multiple vulnerabilities were identified within the ICRouter system, with varyin
 Lack of thorough testing and clear documentation emerged as quality concerns:
 
 - **Insufficient Testing**: Inadequate test coverage across components, especially for multi-chain canister interactions, increases the risk of undetected bugs and vulnerabilities (SS-ICROUTER-003, SS-ICROUTER-007).
-- **State Monitoring Deficiencies**: Inconsistent mechanisms to monitor the state size of the ETH and BTC minter canisters limit the ability to address storage concerns (~~SS-ICROUTER-006~~).
+- **State Monitoring Deficiencies**: Inconsistent mechanisms to monitor the state size of the ETH and BTC minter canisters limit the ability to address storage concerns (SS-ICROUTER-006).
 - **Overall Documentation**: Lack of comprehensive comments and code annotations makes understanding and maintenance harder, especially for complex functions (SS-ICROUTER-027).
 
 ## Application Architecture
