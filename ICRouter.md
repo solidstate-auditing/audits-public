@@ -907,7 +907,7 @@ The system decrements the canister's fee balance and transfers (not burns) the s
 #### SS-ICROUTER-021: Incorrect Logging of `minConfirmations` Value
 
 - **Component:** Ethereum Integration
-- **Severity:** Low
+- **Severity:** Medium
 - **Details:** In line 3601, when setting the `_minConfirmations` value, the log outputs the user-provided value. However, if the provided value is less than 5, the system overrides it to 5 as per the preceding condition. The log does not reflect this adjustment, potentially misleading administrators.
 - **Implication:** Inaccurate logging can cause confusion and misinform about the actual configuration, complicating debugging and system monitoring.
 - **Recommendation:** Modify the logging statement to output the effective `_minConfirmations` value after validation and adjustment. This ensures that logs accurately represent the system's operational parameters.
@@ -917,7 +917,7 @@ The system decrements the canister's fee balance and transfers (not burns) the s
 #### SS-ICROUTER-022: Incorrect Logging of `minRPCConfirmations` Value
 
 - **Component:** Ethereum Integration
-- **Severity:** Low
+- **Severity:** Medium
 - **Details:** In line 3612, the system uses the user-provided argument in the log for `minRPCConfirmations`. However, if the user sets this value to 0, the system overrides it to 1 as per the preceding check, but the log still displays 0.
 - **Implication:** This discrepancy between the logged value and the actual operational value can mislead administrators, potentially affecting system monitoring and troubleshooting.
 - **Recommendation:** Adjust the logging to display the actual `minRPCConfirmations` value after validation. This ensures transparency and accuracy in system logs.
@@ -927,7 +927,7 @@ The system decrements the canister's fee balance and transfers (not burns) the s
 #### SS-ICROUTER-023: `setDepositMethod` Accepts Invalid Values
 
 - **Component:** Ethereum Integration
-- **Severity:** Low
+- **Severity:** Medium
 - **Details:** The `setDepositMethod` function accepts any `Nat8` value as a deposit method. This lack of validation allows setting invalid or unsupported deposit methods, which may lead to unexpected behavior.
 - **Implication:** Accepting arbitrary values can cause the system to enter undefined states or behave unpredictably, potentially leading to errors or vulnerabilities.
 - **Recommendation:** Implement input validation to ensure that only valid and supported deposit methods can be set. Consider using an enumeration or variant type to represent acceptable methods, providing compile-time checks and improved code clarity.
@@ -980,7 +980,7 @@ The system decrements the canister's fee balance and transfers (not burns) the s
 #### SS-ICROUTER-028: Misleading Transfer Call Marked as Burn with Incorrect Logging
 
 - **Component:** Ethereum Integration
-- **Severity:** Medium
+- **Severity:** Low
 - **Details:** In certain instances, transfer operations are incorrectly marked as burns in the code and accompanying logs. This mislabeling can cause confusion when auditing transactions or debugging the system.
 - **Implication:** Misrepresenting the nature of operations can lead to misunderstandings about system behavior, complicate audits, and obscure the tracking of funds.
 - **Recommendation:** Review and correct the code to accurately reflect the type of operation being performed. Update logging statements to provide precise and clear information about each transaction.
