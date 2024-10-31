@@ -75,7 +75,7 @@ This scorecard is a broad overview of all our findings. You can also view the [S
 
 This document is the official code security audit report by [Solidstate](https://www.solidstateauditing.com/) for the [ICRouter Decentralized Application](https://iclight.io/icRouter), which is a product of the [ICLighthouse DAO](https://iclight.house/). It represents a professional security review by a team of industry-native [Internet Computer Protocol](https://icpguide.com/) ("ICP") experts.
 
-The initial audit review was started on September 16th, 2024, and completed October 16th, 2024, with the Post-Audit Review #1 started Oct 26, 2024, and completed on Oct 27, 2024. The latest audit review incorporated the team's latest code updates since the audit began along with their resolutions and responses to the [detailed list of initial audit findings.](#detailed-list-of-findings)
+The initial audit review was started on September 16th, 2024, and completed October 17th, 2024, with the Post-Audit Review #1 started Oct 26, 2024, and completed on Oct 27, 2024. The latest audit review incorporated the team's latest code updates since the audit began along with their resolutions and responses to the [detailed list of initial audit findings.](#detailed-list-of-findings)
 
 ### Purpose
 
