@@ -266,13 +266,13 @@ We classified our findings into the following categories:
 
 ### Tally of issues by severity
 
-| Category | Number of Findings |
-| --- | --- |
-| Very High | 1 |
-| High | 9 |
-| Medium | 15 |
-| Low | 5 |
-| Total: | 20 |
+| Category | Security Issues | Non-Security Issues | SNS-Readiness Issues |
+| --- | --- | --- | --- |
+| Very High | 1 | 0 | 0 |
+| High | 6 | 0 | 2 |
+| Medium | 9 | 5 | 1 |
+| Low | 6 | 0 | 0 |
+| Total per category | 22 | 5 | 3 |
 
 ### **Security Concerns**
 
@@ -774,7 +774,7 @@ Moreover, this allows an authenticated party to create arbitrary numbers of dele
 #### **SS-NFID-024: Lack of Comments in Frontend Code**
 
 - **Component:** Frontend (fe)
-- **Severity:** High
+- **Severity:** Medium
 - **Details:** The frontend code is largely uncommented, making it difficult to understand the logic and flow of the application. This lack of documentation impedes maintenance and onboarding of new developers.
 - **Implication:** Poorly documented code increases the risk of bugs, slows down development, and makes collaboration challenging.
 - **Recommendation:**
@@ -874,8 +874,8 @@ A “post-audit review” is essentially another audit focused on reviewing and 
 | **Severity** | **Found** | **Fixed/Partially Fixed** | **Not an Issue** | **Not fixed (see Notes)** |
 | --- | --- | --- | --- | --- |
 | Very High | 1 | 1 | 0 | 0 |
-| High | 9 | 7 | 0 | 2 |
-| Medium | 15 | 13 | 0 | 2 |
+| High | 8 | 6 | 0 | 1 |
+| Medium | 16 | 13 | 0 | 3 |
 | Low | 5 | 5 | 0 | 0 |
 
 **Detailed statuses**
@@ -905,9 +905,9 @@ A “post-audit review” is essentially another audit focused on reviewing and 
 | **SS-NFID-021** | Low | Fixed | `1b1779c8047419faad90a1e01c5f891299968970` | Auditor notes: spurious file was removed |
 | **SS-NFID-022** | Low | Fixed | `2b42efe23aea02ec19217e429cd1bc8a13f2a89b` | Auditor notes: all of `recover_account` was removed |
 | **SS-NFID-023** | Medium | Fixed | `215db061cea5860decbe2f3da91a21bfa1b71a46` `21950b365a511342a3913987c66ee4c9fdbd9839` `73ebb12c74ed300c376a744a0a24c311980f5af9` | Auditor notes: There are now build instructions. |
-| **SS-NFID-024** | High | Not Fixed | - | |
+| **SS-NFID-024** | Medium | Not Fixed | - | Developer notes: “While we agree it is best practice to add comments and appreciate the focus on documentation, we don’t consider a lack of comments a security issue as it can’t break anything and would like to add them at a time when we have weeks to dedicate to the task.” |
 | **SS-NFID-025** | Medium | Fixed | `af5946b892781a03520242dba627a91915753557` `63152a06bebf6d48ce10d6446e2606fea6cb65e3` | Auditor notes: The NodeJS version has been made consistent both in the server and the client |
-| **SS-NFID-026** | Medium | Not Fixed | - | |
+| **SS-NFID-026** | Medium | Not Fixed | - | Developer notes: “While we agree it is best practice to add comments and appreciate the focus on documentation, we don’t consider a lack of comments a security issue as it can’t break anything and would like to add them at a time when we have weeks to dedicate to the task.” |
 | **SS-NFID-027** | Medium | Fixed | `d84af8ba27e8669ca9c444f551446eb6731608a5` | Auditor notes: Dfx version was upgraded to `0.24.1` and a note was made in the README |
 | **SS-NFID-028** | High | Fixed | `6b0d83dceb8bad1e1fa116bd0ccab1e433cb6a1e` | Auditor notes: The IM canister now has client separation between `admin` duties (to be given to an SNS governance canister) that, currently, are to control configuration change; and `operator` duties, which include backups. |
 | **SS-NFID-029** | High | Fixed | `6b0d83dceb8bad1e1fa116bd0ccab1e433cb6a1e` | Auditor notes: The method `get_all_accounts_json` was made accessible to the operator role only and `add_all_accounts_json` was removed. This is a great practice sense as accounts can be continuously backed up by `operator` but a canister upgrade (mediated by governance) would be necessary to actually replace all accounts, in case something went wrong. |
