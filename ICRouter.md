@@ -6,6 +6,10 @@
 
 # **ICRouter Audit Report**
 
+## 📄 [Click here](https://drive.google.com/file/d/1-5WNKACaRmOesGgCpoWE0xtV710B8XVt/view?usp=sharing) for the PDF version of this report.
+
+---
+
 > ⚠️ **General Disclaimer**
 > This audit report aims to detail the current state of security and potential weaknesses of the audited app within a limited scope. It does not make any recommendations regarding the app’s user experience, investment potential, or other factors.
 
