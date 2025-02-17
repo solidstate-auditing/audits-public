@@ -21,5 +21,4 @@ Welcome to our audit repository! Here you'll find a collection of our completed 
 
 | **Project**            | **Timeline**            | **Status**              |
 |-------------------------|-------------------------|-------------------------|
-| **Liquity**             | November–December 2024 | Ongoing Audit (WIP)     |
-| **IC Panda**            | December 2024          | Ongoing Audit (WIP)     |
+| **Alexandria DAO**             | February 2025 | Ongoing Audit (WIP)     |
