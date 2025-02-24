@@ -10,7 +10,13 @@
     - Review watermarks
     - General Disclaimers
     - Within scope
+- [**Scorecard**](#scorecard)
+- [**Executive Summary**](#executive-summary)
+    - Tally of issues by severity
 - [**Detailed List of Findings**](#detailed-list-of-findings)
+- [**Post-audit Review**](post-audit-review-1)
+    - Status of found issues
+    - Detailed statuses
 
 # **Audit Report Body**
 
